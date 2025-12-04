@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Prenez rendez-vous chez Bella Nails. Contactez-nous pour réserver votre séance de manucure ou pédicure à Ville-du-Bois.">
+    <title>Contact & Réservation | Bella Nails</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#1E1E1E',
+                        accent: '#C08497',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-primary text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-primary/95 backdrop-blur-md shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-12">
+                        <a href="index.html" class="nav-link text-sm uppercase tracking-widest">Accueil</a>
+                        <a href="services.html" class="nav-link text-sm uppercase tracking-widest">Services</a>
+                        <a href="gallery.html" class="nav-link text-sm uppercase tracking-widest">Galerie</a>
+                        <a href="about.html" class="nav-link text-sm uppercase tracking-widest">À Propos</a>
+                        <a href="contact.html" class="nav-link active text-sm uppercase tracking-widest">Contact</a>
+                        <a href="contact.html#appointment" class="btn-primary text-sm">
+                            Prendre RDV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="md:hidden hidden mobile-menu absolute w-full left-0 top-24 border-t border-gray-800">
+            <div class="px-6 py-8 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Accueil</a>
+                <a href="services.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Services</a>
+                <a href="gallery.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Galerie</a>
+                <a href="about.html" class="block text-gray-300 hover:text-accent text-lg font-serif">À Propos</a>
+                <a href="contact.html" class="block text-white hover:text-accent text-lg font-serif">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-secondary/50 to-primary z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif mb-6 animate-fade-up">Contactez-nous</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-fade-up delay-100">
+                Nous sommes à votre écoute pour toute question ou réservation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16">
+
+                <!-- Info -->
+                <div class="animate-fade-up delay-200">
+                    <h2 class="text-3xl font-serif mb-8 text-accent">Nos Coordonnées</h2>
+
+                    <div class="space-y-8 mb-12">
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 border border-gray-800 text-accent">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-lg font-serif mb-2">Adresse</h3>
+                                <p class="text-gray-400 font-light">123 Rue de la Beauté<br>91940 Ville-du-Bois</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 border border-gray-800 text-accent">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-lg font-serif mb-2">Téléphone</h3>
+                                <p class="text-gray-400 font-light">01 XX XX XX XX</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 border border-gray-800 text-accent">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-lg font-serif mb-2">Email</h3>
+                                <p class="text-gray-400 font-light">contact@bellanails.fr</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div
+                                class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0 border border-gray-800 text-accent">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div class="ml-6">
+                                <h3 class="text-lg font-serif mb-2">Horaires</h3>
+                                <div class="text-gray-400 font-light space-y-1">
+                                    <p><span class="w-24 inline-block">Lun - Ven:</span> 10h00 - 19h00</p>
+                                    <p><span class="w-24 inline-block">Samedi:</span> 09h00 - 18h00</p>
+                                    <p><span class="w-24 inline-block">Dimanche:</span> Fermé</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div id="appointment"
+                    class="bg-secondary p-10 rounded-2xl border border-gray-800 animate-fade-up delay-300">
+                    <h2 class="text-3xl font-serif mb-8 text-white">Prendre Rendez-vous</h2>
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name"
+                                    class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Nom</label>
+                                <input type="text" id="name"
+                                    class="w-full bg-primary border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors"
+                                    placeholder="Votre nom">
+                            </div>
+                            <div>
+                                <label for="phone"
+                                    class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Téléphone</label>
+                                <input type="tel" id="phone"
+                                    class="w-full bg-primary border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors"
+                                    placeholder="06 XX XX XX XX">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="email"
+                                class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Email</label>
+                            <input type="email" id="email"
+                                class="w-full bg-primary border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors"
+                                placeholder="votre@email.com">
+                        </div>
+
+                        <div>
+                            <label for="service"
+                                class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Service
+                                Souhaité</label>
+                            <select id="service"
+                                class="w-full bg-primary border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors">
+                                <option value="">Choisir un service...</option>
+                                <option value="manucure">Manucure Classique</option>
+                                <option value="semi">Vernis Semi-Permanent</option>
+                                <option value="gel">Pose Gel / Résine</option>
+                                <option value="nailart">Nail Art</option>
+                                <option value="pedicure">Pédicure Spa</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message"
+                                class="block text-sm text-gray-400 mb-2 uppercase tracking-wide">Message (Date
+                                souhaitée, etc.)</label>
+                            <textarea id="message" rows="4"
+                                class="w-full bg-primary border border-gray-700 rounded-lg px-4 py-3 text-white focus:border-accent focus:ring-1 focus:ring-accent outline-none transition-colors"
+                                placeholder="Je souhaiterais un rendez-vous le..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full btn-primary py-4 text-lg">
+                            Envoyer la demande
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section class="h-96 w-full bg-gray-800 relative">
+        <!-- Placeholder for map - in production use Google Maps embed -->
+        <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+            <div class="text-center">
+                <i class="fas fa-map-marked-alt text-4xl text-gray-600 mb-4"></i>
+                <p class="text-gray-500">Carte Google Maps</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white block mb-6">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm font-light mb-8">
+                        L'élégance intemporelle pour vos mains et vos pieds. Une expérience de luxe au cœur de
+                        Ville-du-Bois.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Accueil</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Services</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Galerie</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Nous Trouver</h4>
+                    <ul class="space-y-4 text-gray-500 font-light">
+                        <li>123 Rue de la Beauté</li>
+                        <li>91940 Ville-du-Bois</li>
+                        <li class="pt-4"><a href="tel:01XXXXXXXX" class="hover:text-accent transition-colors">01 XX XX
+                                XX XX</a></li>
+                        <li><a href="mailto:contact@bellanails.fr"
+                                class="hover:text-accent transition-colors">contact@bellanails.fr</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <p>&copy; 2024 Bella Nails. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-400">Mentions Légales</a>
+                    <a href="#" class="hover:text-gray-400">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Simple form handling
+        document.getElementById('contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            BellaNails.showLoading(btn);
+
+            // Simulate API call
+            setTimeout(() => {
+                BellaNails.hideLoading(btn);
+                BellaNails.showSuccessMessage('Votre demande a bien été envoyée !');
+                this.reset();
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Découvrez l'histoire de Bella Nails, notre équipe d'expertes et notre philosophie. Salon de manucure de luxe à Ville-du-Bois.">
+    <title>À Propos | Bella Nails</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#1E1E1E',
+                        accent: '#C08497',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-primary text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-primary/95 backdrop-blur-md shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-12">
+                        <a href="index.html" class="nav-link text-sm uppercase tracking-widest">Accueil</a>
+                        <a href="services.html" class="nav-link text-sm uppercase tracking-widest">Services</a>
+                        <a href="gallery.html" class="nav-link text-sm uppercase tracking-widest">Galerie</a>
+                        <a href="about.html" class="nav-link active text-sm uppercase tracking-widest">À Propos</a>
+                        <a href="contact.html" class="nav-link text-sm uppercase tracking-widest">Contact</a>
+                        <a href="contact.html#appointment" class="btn-primary text-sm">
+                            Prendre RDV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="md:hidden hidden mobile-menu absolute w-full left-0 top-24 border-t border-gray-800">
+            <div class="px-6 py-8 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Accueil</a>
+                <a href="services.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Services</a>
+                <a href="gallery.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Galerie</a>
+                <a href="about.html" class="block text-white hover:text-accent text-lg font-serif">À Propos</a>
+                <a href="contact.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-secondary/50 to-primary z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif mb-6 animate-fade-up">Notre Histoire</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-fade-up delay-100">
+                Plus qu'un salon, une destination dédiée à la beauté et au bien-être.
+            </p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="animate-fade-up delay-200">
+                    <h2 class="text-3xl font-serif mb-6 text-accent">La Passion de l'Excellence</h2>
+                    <p class="text-gray-300 mb-6 leading-relaxed font-light">
+                        Fondé en 2020, Bella Nails est né d'une vision simple : offrir une expérience de manucure haut
+                        de gamme dans un cadre apaisant et raffiné. Nous croyons que la beauté des mains est un art qui
+                        mérite le plus grand soin.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed font-light">
+                        Chaque détail de notre salon a été pensé pour votre confort, de l'ambiance lumineuse tamisée à
+                        la sélection rigoureuse de nos produits. Nous travaillons exclusivement avec des marques
+                        reconnues pour leur qualité et leur respect de l'ongle naturel.
+                    </p>
+                    <div class="flex items-center mt-8">
+                        <div class="h-px bg-gray-700 flex-grow mr-4"></div>
+                        <span class="font-serif italic text-gray-500">Bella Nails</span>
+                    </div>
+                </div>
+                <div class="relative animate-fade-up delay-300">
+                    <div class="absolute -bottom-6 -right-6 w-full h-full border border-accent/30 rounded-lg -z-10">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Salon Interior" class="rounded-lg shadow-2xl w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-secondary">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-serif mb-4">Nos Valeurs</h2>
+                <div class="w-20 h-1 bg-accent mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-800 group-hover:border-accent transition-colors duration-300">
+                        <i class="fas fa-gem text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Qualité Premium</h3>
+                    <p class="text-gray-400 font-light">Des produits sélectionnés parmi les meilleures marques mondiales
+                        pour garantir tenue et brillance.</p>
+                </div>
+
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-800 group-hover:border-accent transition-colors duration-300">
+                        <i class="fas fa-heart text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Passion & Expertise</h3>
+                    <p class="text-gray-400 font-light">Une équipe formée en continu aux dernières techniques et
+                        tendances du nail art.</p>
+                </div>
+
+                <div class="text-center group">
+                    <div
+                        class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-800 group-hover:border-accent transition-colors duration-300">
+                        <i class="fas fa-leaf text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="text-xl font-serif mb-4">Hygiène Irréprochable</h3>
+                    <p class="text-gray-400 font-light">Des protocoles de stérilisation stricts pour votre sécurité et
+                        votre tranquillité d'esprit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-4xl font-serif mb-4">Rencontrez l'Équipe</h2>
+                <p class="text-gray-400 font-light">Des artistes passionnées à votre service</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Sarah"
+                        class="w-full h-96 object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 to-transparent p-6">
+                        <h3 class="text-xl font-serif text-white">Sarah</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-2">Fondatrice & Master Nail Artist
+                        </p>
+                        <p
+                            class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Spécialiste en extensions et nail art complexe.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Léa"
+                        class="w-full h-96 object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 to-transparent p-6">
+                        <h3 class="text-xl font-serif text-white">Léa</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-2">Nail Artist Senior</p>
+                        <p
+                            class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Experte en manucure russe et soins spa.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card group relative overflow-hidden rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Julie"
+                        class="w-full h-96 object-cover transition duration-500 group-hover:scale-105 filter grayscale group-hover:grayscale-0">
+                    <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/90 to-transparent p-6">
+                        <h3 class="text-xl font-serif text-white">Julie</h3>
+                        <p class="text-accent text-sm uppercase tracking-widest mb-2">Nail Artist</p>
+                        <p
+                            class="text-gray-400 text-sm font-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            Passionnée par le nail art minimaliste et géométrique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white block mb-6">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm font-light mb-8">
+                        L'élégance intemporelle pour vos mains et vos pieds. Une expérience de luxe au cœur de
+                        Ville-du-Bois.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Accueil</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Services</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Galerie</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Nous Trouver</h4>
+                    <ul class="space-y-4 text-gray-500 font-light">
+                        <li>123 Rue de la Beauté</li>
+                        <li>91940 Ville-du-Bois</li>
+                        <li class="pt-4"><a href="tel:01XXXXXXXX" class="hover:text-accent transition-colors">01 XX XX
+                                XX XX</a></li>
+                        <li><a href="mailto:contact@bellanails.fr"
+                                class="hover:text-accent transition-colors">contact@bellanails.fr</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <p>&copy; 2024 Bella Nails. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-400">Mentions Légales</a>
+                    <a href="#" class="hover:text-gray-400">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

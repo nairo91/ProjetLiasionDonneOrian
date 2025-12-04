@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Galerie photos de nos réalisations : manucure, nail art, pédicure. L'art de la beauté des ongles à Ville-du-Bois.">
+    <title>Galerie | Bella Nails</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        secondary: '#1E1E1E',
+                        accent: '#C08497',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-btn.active {
+            background-color: #C08497;
+            color: white;
+            border-color: #C08497;
+        }
+    </style>
+</head>
+
+<body class="bg-primary text-white font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-primary/95 backdrop-blur-md shadow-lg" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="flex items-center space-x-12">
+                        <a href="index.html" class="nav-link text-sm uppercase tracking-widest">Accueil</a>
+                        <a href="services.html" class="nav-link text-sm uppercase tracking-widest">Services</a>
+                        <a href="gallery.html" class="nav-link active text-sm uppercase tracking-widest">Galerie</a>
+                        <a href="about.html" class="nav-link text-sm uppercase tracking-widest">À Propos</a>
+                        <a href="contact.html" class="nav-link text-sm uppercase tracking-widest">Contact</a>
+                        <a href="contact.html#appointment" class="btn-primary text-sm">
+                            Prendre RDV
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu"
+            class="md:hidden hidden mobile-menu absolute w-full left-0 top-24 border-t border-gray-800">
+            <div class="px-6 py-8 space-y-4">
+                <a href="index.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Accueil</a>
+                <a href="services.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Services</a>
+                <a href="gallery.html" class="block text-white hover:text-accent text-lg font-serif">Galerie</a>
+                <a href="about.html" class="block text-gray-300 hover:text-accent text-lg font-serif">À Propos</a>
+                <a href="contact.html" class="block text-gray-300 hover:text-accent text-lg font-serif">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="pt-40 pb-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-secondary/50 to-primary z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-serif mb-6 animate-fade-up">Notre Portfolio</h1>
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg font-light animate-fade-up delay-100">
+                Une collection de nos plus belles créations, reflet de notre passion et de notre expertise.
+            </p>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="pb-32">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-16 animate-fade-up delay-200">
+                <button
+                    class="filter-btn active px-8 py-3 rounded-full border border-gray-700 text-gray-300 hover:border-accent hover:text-accent transition-all duration-300 text-sm uppercase tracking-widest"
+                    data-filter="all">
+                    Toutes
+                </button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border border-gray-700 text-gray-300 hover:border-accent hover:text-accent transition-all duration-300 text-sm uppercase tracking-widest"
+                    data-filter="manucure">
+                    Manucure
+                </button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border border-gray-700 text-gray-300 hover:border-accent hover:text-accent transition-all duration-300 text-sm uppercase tracking-widest"
+                    data-filter="nail-art">
+                    Nail Art
+                </button>
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border border-gray-700 text-gray-300 hover:border-accent hover:text-accent transition-all duration-300 text-sm uppercase tracking-widest"
+                    data-filter="pedicure">
+                    Pédicure
+                </button>
+            </div>
+
+            <!-- Grid -->
+            <div id="gallery-grid"
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fade-up delay-300">
+
+                <!-- Manucure Items -->
+                <div class="gallery-item manucure group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="manucure">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Manucure Classique"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Manucure Classique</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Élégance naturelle</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item manucure group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="manucure">
+                    <img src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Semi-Permanent"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Semi-Permanent Nude</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Finition parfaite</p>
+                    </div>
+                </div>
+
+                <!-- Nail Art Items -->
+                <div class="gallery-item nail-art group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="nail-art">
+                    <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Nail Art Floral"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Art Floral</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Peint à la main</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item nail-art group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="nail-art">
+                    <img src="https://images.unsplash.com/photo-1562815069-9cd8d1bb63aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Géométrique"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Géométrique</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Lignes modernes</p>
+                    </div>
+                </div>
+
+                <!-- Pedicure Items -->
+                <div class="gallery-item pedicure group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="pedicure">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0201ba1bd11?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Pédicure Spa"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Pédicure Spa</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Détente absolue</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item pedicure group cursor-pointer relative overflow-hidden rounded-lg aspect-[4/5]"
+                    data-category="pedicure">
+                    <img src="https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Pédicure Été"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-500 flex flex-col justify-end p-8">
+                        <h3
+                            class="text-xl font-serif text-white mb-2 transform translate-y-4 group-hover:translate-y-0 transition duration-500">
+                            Collection Été</h3>
+                        <p
+                            class="text-gray-300 text-sm font-light transform translate-y-4 group-hover:translate-y-0 transition duration-500 delay-100">
+                            Couleurs vibrantes</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Preview -->
+    <section class="py-20 bg-secondary border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-serif mb-6">Suivez-nous sur Instagram</h2>
+            <p class="text-gray-400 mb-10">Pour plus d'inspiration quotidienne</p>
+            <a href="#" class="btn-outline">
+                <i class="fab fa-instagram mr-2"></i> @bellanails_villedubois
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-900 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="text-2xl font-serif font-bold tracking-wider text-white block mb-6">
+                        BELLA<span class="text-accent">NAILS</span>
+                    </a>
+                    <p class="text-gray-500 max-w-sm font-light mb-8">
+                        L'élégance intemporelle pour vos mains et vos pieds. Une expérience de luxe au cœur de
+                        Ville-du-Bois.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i
+                                class="fab fa-pinterest text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Navigation</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Accueil</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Services</a>
+                        </li>
+                        <li><a href="gallery.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Galerie</a>
+                        </li>
+                        <li><a href="contact.html"
+                                class="text-gray-500 hover:text-accent transition-colors text-sm uppercase tracking-wider">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-serif mb-6">Nous Trouver</h4>
+                    <ul class="space-y-4 text-gray-500 font-light">
+                        <li>123 Rue de la Beauté</li>
+                        <li>91940 Ville-du-Bois</li>
+                        <li class="pt-4"><a href="tel:01XXXXXXXX" class="hover:text-accent transition-colors">01 XX XX
+                                XX XX</a></li>
+                        <li><a href="mailto:contact@bellanails.fr"
+                                class="hover:text-accent transition-colors">contact@bellanails.fr</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
+                <p>&copy; 2024 Bella Nails. Tous droits réservés.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-gray-400">Mentions Légales</a>
+                    <a href="#" class="hover:text-gray-400">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="image-modal"
+        class="fixed inset-0 bg-black/95 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="relative max-w-5xl max-h-full w-full">
+            <button id="close-modal"
+                class="absolute -top-12 right-0 text-white hover:text-accent transition-colors z-10">
+                <i class="fas fa-times text-3xl"></i>
+            </button>
+            <img id="modal-image" src="" alt=""
+                class="max-w-full max-h-[85vh] object-contain mx-auto rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
